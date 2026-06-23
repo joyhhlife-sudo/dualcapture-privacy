@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-xdc-lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Support | X Dual Capture</title>
+  <title data-i18n-en="Support | X Dual Capture" data-i18n-zh="技术支持 | X 同步双拍">Support | X Dual Capture</title>
   <meta name="description" content="Help, troubleshooting, compatibility, purchases, and support for X Dual Capture.">
   <meta name="theme-color" content="#3157ff">
   <meta property="og:title" content="Support | X Dual Capture">
@@ -11,6 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="X Dual Capture">
   <link rel="canonical" href="https://joyhhlife-sudo.github.io/dualcapture-privacy/support.html">
+  <script src="./language.js"></script>
   <style>
 :root {
   color-scheme: light dark;
@@ -180,7 +181,8 @@ li + li { margin-top: 7px; }
 .footer { border-top: 1px solid var(--line); padding: 34px 16px 52px; color: var(--muted); }
 .footer-inner { width: min(var(--max), 100%); margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
-.lang-panel[hidden] { display: none !important; }
+html[data-xdc-lang="en"] .lang-panel[data-lang="zh"],
+html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !important; }
 .mobile-nav-toggle { display: none; }
 @media (max-width: 820px) {
   .nav { min-height: 64px; align-items: flex-start; padding: 10px 0; }
@@ -225,8 +227,8 @@ li + li { margin-top: 7px; }
 <a href="support.html" aria-current="page" data-i18n-en="Support" data-i18n-zh="技术支持">Support</a>
 <a href="terms.html" data-i18n-en="Terms" data-i18n-zh="使用条款">Terms</a>
       <span class="lang-switch" aria-label="Language selector">
-        <button class="lang-btn active" type="button" data-lang-choice="en" aria-pressed="true">EN</button>
-        <button class="lang-btn" type="button" data-lang-choice="zh" aria-pressed="false">中文</button>
+        <button class="lang-btn active" type="button" data-lang-choice="en" aria-pressed="true">English</button>
+        <button class="lang-btn" type="button" data-lang-choice="zh-Hans" aria-pressed="false">简体中文</button>
       </span>
     </div>
   </nav>
@@ -239,7 +241,7 @@ li + li { margin-top: 7px; }
       <h1>Get back to capturing.</h1>
       <p>Troubleshooting for permissions, dual-camera compatibility, recording, saving, Pro purchases, and restores.</p>
     </div>
-    <div class="lang-panel" data-lang="zh" hidden>
+    <div class="lang-panel" data-lang="zh">
       <div class="eyebrow">技术支持</div>
       <h1>快速排查，继续拍摄。</h1>
       <p>这里提供权限、双摄兼容性、录像、保存、Pro 购买与恢复购买的排查说明。</p>
@@ -257,7 +259,7 @@ li + li { margin-top: 7px; }
         <p class="toc-title">On this page</p>
         <a href="#s1">Quick Start</a><a href="#s2">Compatibility</a><a href="#s3">Permissions</a><a href="#s4">Dual Camera Issues</a><a href="#s5">Recording & Saving</a><a href="#s6">Layouts & Zoom</a><a href="#s7">Pro Purchase</a><a href="#s8">Restore & Refunds</a><a href="#s9">Before Reporting</a><a href="#s10">Contact</a>
       </div>
-      <div class="lang-panel" data-lang="zh" hidden>
+      <div class="lang-panel" data-lang="zh">
         <p class="toc-title">本页目录</p>
         <a href="#zs1">快速开始</a><a href="#zs2">设备兼容性</a><a href="#zs3">权限问题</a><a href="#zs4">双摄不可用</a><a href="#zs5">录像与保存</a><a href="#zs6">布局与变焦</a><a href="#zs7">Pro 购买</a><a href="#zs8">恢复购买与退款</a><a href="#zs9">提交问题前</a><a href="#zs10">联系支持</a>
       </div>
@@ -277,7 +279,7 @@ li + li { margin-top: 7px; }
 <section id="s9"><h2>9. Before Reporting a Problem</h2><p>Please include:</p><ul><li>App version, iOS version, and iPhone model</li><li>The selected layout and camera combination</li><li>Whether the issue affects photos, videos, or both</li><li>Exact reproduction steps and any displayed error message</li><li>Whether restarting the app or device changed the result</li></ul><p>Do not post private media, Apple Account passwords, full receipts, payment card details, device passcodes, or other sensitive information.</p></section>
 <section id="s10"><h2>10. Contact Support</h2><div class="action-grid"><div class="action-card"><h3>Public technical issue</h3><p>Use GitHub Issues for reproducible, non-sensitive technical reports.</p><a class="button-link" href="https://github.com/joyhhlife-sudo/dualcapture-privacy/issues" target="_blank" rel="noopener">Open GitHub Issues</a></div><div class="action-card"><h3>Policies</h3><p>Review privacy and usage terms.</p><a class="button-link" href="index.html">Privacy Policy</a> &nbsp; <a href="terms.html">Terms</a></div></div><p>For private or purchase-related matters, use the support contact displayed on the X Dual Capture App Store product page when available. Feedback email：joyhhlife@gmail.com  </p></section>
 </div>
-      <div class="lang-panel" data-lang="zh" hidden>
+      <div class="lang-panel" data-lang="zh">
 <div class="notice"><strong>需要帮助？</strong>大多数相机问题与权限、设备不支持的摄像头组合、存储不足或设备温度过高有关。</div>
 <section id="zs1"><h2>一、快速开始</h2><ol><li>打开 X 同步双拍。</li><li>允许相机权限。</li><li>如需录制声音，请允许麦克风权限。</li><li>选择设备支持的画中画或分屏布局。</li><li>根据需要调整摄像头、画中画位置或变焦。</li><li>点击拍照或录像按钮。</li><li>保存时允许照片权限。</li></ol></section>
 <section id="zs2"><h2>二、设备兼容性</h2><p>前后摄同时拍摄取决于 iPhone 硬件、iOS 版本、支持的摄像头组合、可用内存及设备温度。并非所有 iPhone 都支持全部组合。</p><p>可能因设备而异的功能包括：</p><ul><li>前后双摄同时拍摄</li><li>0.5× 超广角是否可用</li><li>最大变焦及光学摄像头选择</li><li>分辨率、帧率和录像时长</li><li>画中画尺寸、分屏布局和摄像头切换</li><li>混合与分开保存能力</li></ul><p>如果某项控制不可用，App 可能将其停用或显示说明。</p></section>
@@ -308,42 +310,5 @@ li + li { margin-top: 7px; }
     </div>
   </div>
 </footer>
-<script>
-(function () {
-  const panels = document.querySelectorAll('.lang-panel');
-  const buttons = document.querySelectorAll('.lang-btn');
-  const labelNodes = document.querySelectorAll('[data-i18n-en]');
-
-  function setLanguage(lang) {
-    const normalized = lang === 'zh' ? 'zh' : 'en';
-    document.documentElement.lang = normalized === 'zh' ? 'zh-Hans' : 'en';
-    panels.forEach(panel => { panel.hidden = panel.dataset.lang !== normalized; });
-    buttons.forEach(btn => {
-      const active = btn.dataset.langChoice === normalized;
-      btn.classList.toggle('active', active);
-      btn.setAttribute('aria-pressed', String(active));
-    });
-    labelNodes.forEach(node => {
-      node.textContent = normalized === 'zh' ? node.dataset.i18nZh : node.dataset.i18nEn;
-    });
-    try { localStorage.setItem('xdc-lang', normalized); } catch (_) {}
-  }
-
-  const requested = new URLSearchParams(location.search).get('lang');
-  let saved = null;
-  try { saved = localStorage.getItem('xdc-lang'); } catch (_) {}
-  setLanguage(requested || saved || 'en');
-
-  buttons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.langChoice)));
-  const toggle = document.querySelector('.mobile-nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-  }
-})();
-</script>
 </body>
 </html>
