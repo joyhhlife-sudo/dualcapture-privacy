@@ -184,6 +184,32 @@ li + li { margin-top: 7px; }
 html[data-xdc-lang="en"] .lang-panel[data-lang="zh"],
 html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !important; }
 .mobile-nav-toggle { display: none; }
+
+.hero-cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 14px 36px rgba(49,87,255,.32);
+  text-decoration: none;
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+.store-button:hover {
+  text-decoration: none;
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 44px rgba(49,87,255,.36);
+}
+.store-button svg { flex-shrink: 0; }
+.store-button .stack { display: inline-flex; flex-direction: column; line-height: 1.1; text-align: left; }
+.store-button .small { font-size: 11px; font-weight: 500; opacity: 0.92; margin-bottom: 2px; letter-spacing: .02em; }
+.store-button .big { font-size: 17px; letter-spacing: -0.01em; }
+
 @media (max-width: 820px) {
   .nav { min-height: 64px; align-items: flex-start; padding: 10px 0; }
   .brand-subtitle { max-width: 180px; }
@@ -246,6 +272,21 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
       <h1>隐私，从本地处理开始。</h1>
       <p>X 同步双拍在设备本地处理摄像头内容，设计上不收集你的照片、视频、音频或个人信息。</p>
     </div>
+
+    <div class="hero-cta">
+      <div class="lang-panel" data-lang="en">
+        <a class="store-button" href="https://apps.apple.com/app/id6777402248" target="_blank" rel="noopener" aria-label="Download X Dual Capture on the App Store">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="stack"><span class="small">Download on the</span><span class="big">App Store</span></span>
+        </a>
+      </div>
+      <div class="lang-panel" data-lang="zh">
+        <a class="store-button" href="https://apps.apple.com/cn/app/x%E5%90%8C%E6%AD%A5%E5%8F%8C%E6%8B%8D/id6777402248" target="_blank" rel="noopener" aria-label="下载 X 同步双拍">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="stack"><span class="small">购买或免费下载</span><span class="big">App Store 中国大陆</span></span>
+        </a>
+      </div>
+    </div>
     <div class="hero-meta">
       <span class="pill">Two views, one moment.</span>
       <span class="pill">Made by X Tools</span>
@@ -272,9 +313,9 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
 <section id="p2"><h2>2. Data We Do Not Collect</h2><p>X Dual Capture does not collect:</p><ul><li>Photos, videos, live camera frames, or microphone recordings</li><li>Face data, biometric identifiers, or facial templates</li><li>Precise or approximate location</li><li>Contacts, email addresses, phone numbers, or account credentials</li><li>Advertising identifiers, browsing history, or search history</li><li>Payment card or bank account information</li></ul><p>The app does not require registration and does not create a user profile on X Tools servers.</p></section>
 <section id="p3"><h2>3. On-device Camera and Media Processing</h2><p>Camera preview, dual-camera capture, layout composition, zoom processing, recording, and export are performed locally on your device.</p><p>X Tools does not operate a server that receives or stores your camera media. Your content remains under your control unless you choose to save it to Photos, share it, transfer it, or back it up through Apple or another service.</p><p>If you use the iOS share sheet, the destination app or service may process the selected content under its own privacy policy.</p></section>
 <section id="p4"><h2>4. Device Permissions</h2><h3>Camera</h3><p>Camera access is required to show previews and capture photos or videos from supported front and rear cameras.</p><h3>Microphone</h3><p>Microphone access is used only when recording video with audio enabled. You may deny microphone access and continue using features that do not require sound.</p><h3>Photo Library</h3><p>Photo Library access may be requested when you save captured media. Depending on iOS and your choice, the app may receive add-only access or access limited to selected items.</p><h3>Managing permissions</h3><p>You can review or change access in <span class="code-path">Settings › Privacy &amp; Security</span> or <span class="code-path">Settings › X Dual Capture</span>. Disabling a permission may prevent the related feature from working.</p></section>
-<section id="p5"><h2>5. In-App Purchases</h2><p>X Dual Capture may offer an optional one-time Pro purchase. Apple processes App Store purchases. X Tools does not receive or store your full payment card number, bank information, or Apple Account password.</p><p>The app may receive limited transaction information from Apple, such as the product identifier, purchase completion status, entitlement status, and information needed to restore an eligible purchase. This information is used only to provide or restore purchased features.</p></section>
+<section id="p5"><h2>5. In-App Purchases</h2><p>X Dual Capture offers a free tier with limited features and a one-time Pro purchase that unlocks the full set of features. Apple processes App Store purchases. X Tools does not receive or store your full payment card number, bank information, or Apple Account password.</p><p>The app may receive the minimum information from Apple that is needed to verify, provide, or restore an eligible purchase.</p></section>
 <section id="p6"><h2>6. Analytics, Advertising, and Tracking</h2><ul><li>No third-party advertising SDKs are used.</li><li>No personalized advertisements are displayed.</li><li>X Dual Capture does not track you across apps or websites owned by other companies.</li><li>Your camera content is not used for advertising, profiling, facial-recognition databases, or AI model training.</li></ul><p>Apple may independently process App Store, purchase, device, diagnostic, or usage information according to Apple’s own terms and privacy policies.</p></section>
-<section id="p7"><h2>7. Data Stored Locally</h2><p>The app may store limited information on your device so that it can operate and remember your preferences, including:</p><ul><li>Selected layout, camera, zoom, and recording preferences</li><li>Permission-related status and interface preferences</li><li>Free-use counters or limit status</li><li>Pro entitlement status or purchase restoration state</li></ul><p>Deleting the app may remove locally stored settings. Media already saved in Photos is managed separately by iOS and is not automatically deleted when the app is removed.</p></section>
+<section id="p7"><h2>7. Data Stored Locally</h2><p>The app may store limited information on your device so that it can operate and remember your preferences, including:</p><ul><li>Selected layout, camera, zoom, and recording preferences</li><li>Permission-related status and interface preferences</li><li>Pro entitlement status or purchase restoration state</li></ul><p>Deleting the app may remove locally stored settings. Media already saved in Photos is managed separately by iOS and is not automatically deleted when the app is removed.</p></section>
 <section id="p8"><h2>8. Data Sharing and Retention</h2><p>X Tools does not sell personal information and does not share your photos, videos, audio recordings, or live camera content with advertisers, data brokers, or marketing companies.</p><p>Because X Tools does not upload your camera media to its servers, it does not retain that media. Files saved to Photos remain there until you manage or delete them. Apple may retain App Store transaction records according to its own requirements.</p><p>Information may be disclosed where required by valid law or legal process. In ordinary circumstances, X Tools has no access to media stored only on your device.</p></section>
 <section id="p9"><h2>9. Security and Children’s Privacy</h2><p>Local processing is designed to reduce privacy risk. However, no device, operating system, storage system, backup, or transmission method can be guaranteed completely secure. You are responsible for protecting your device, Apple Account, backups, and shared media.</p><p>X Dual Capture is a general-purpose camera utility and is not specifically directed to children. X Tools does not knowingly collect children’s personal information through the app. Parents and guardians should supervise the use of camera, microphone, sharing, and online services where appropriate.</p></section>
 <section id="p10"><h2>10. Apple and Third-Party Services</h2><p>The app relies on Apple technologies and services, which may include iOS, camera and microphone frameworks, Photos, App Store, In-App Purchase, iCloud or device backup, and the iOS share sheet.</p><p>These services are operated by Apple and are governed by Apple’s terms and privacy policies. When you export or share media to another app or service, that third party’s terms and privacy policy apply.</p></section>
@@ -287,7 +328,7 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
 <section id="zp2"><h2>二、我们不收集的数据</h2><p>X 同步双拍不收集：</p><ul><li>照片、视频、实时摄像头画面或麦克风录音</li><li>人脸数据、生物识别标识或人脸模板</li><li>精确位置或大致位置</li><li>通讯录、邮箱、电话号码或账号凭据</li><li>广告标识符、浏览历史或搜索历史</li><li>银行卡或银行账户信息</li></ul><p>本 App 不要求注册，也不会在 X Tools 服务器上建立用户画像。</p></section>
 <section id="zp3"><h2>三、设备本地处理</h2><p>相机预览、双摄拍摄、布局合成、变焦处理、录像和导出均在你的设备本地完成。</p><p>X Tools 不运营用于接收或存储用户摄像头媒体的服务器。除非你主动保存到“照片”、分享、传输或通过 Apple 或其他服务备份，否则内容始终由你控制。</p><p>当你使用 iOS 系统分享面板时，目标 App 或服务可能依据其自身隐私政策处理你选择的内容。</p></section>
 <section id="zp4"><h2>四、设备权限</h2><h3>相机</h3><p>相机权限用于显示预览，并使用设备支持的前置和后置摄像头拍摄照片或视频。</p><h3>麦克风</h3><p>麦克风权限仅在启用声音并录制视频时使用。你可以拒绝麦克风权限，并继续使用不依赖声音的功能。</p><h3>照片图库</h3><p>保存拍摄内容时，App 可能申请照片图库权限。根据 iOS 版本及你的选择，App 可能仅获得添加照片的权限，或只能访问你明确选择的内容。</p><h3>权限管理</h3><p>你可以在 <span class="code-path">设置 › 隐私与安全性</span> 或 <span class="code-path">设置 › X 同步双拍</span> 中修改权限。关闭权限可能导致对应功能无法使用。</p></section>
-<section id="zp5"><h2>五、App 内购买</h2><p>X 同步双拍可能提供可选的一次性 Pro 买断。购买由 Apple 通过 App Store 处理。X Tools 不会接收或存储你的完整银行卡号、银行信息或 Apple 账户密码。</p><p>App 可能从 Apple 获得有限的交易信息，例如产品标识符、购买完成状态、权益状态，以及恢复符合条件的购买所需的信息。这些信息仅用于提供或恢复已购买功能。</p></section>
+<section id="zp5"><h2>五、App 内购买</h2><p>X 同步双拍提供功能受限的免费版，以及一次买断即可解锁全部功能的 Pro。购买由 Apple 通过 App Store 处理。X Tools 不会接收或存储你的完整银行卡号、银行信息或 Apple 账户密码。</p><p>App 仅从 Apple 获取验证、提供或恢复符合条件的购买所需的最少信息。</p></section>
 <section id="zp6"><h2>六、分析、广告与跟踪</h2><ul><li>不使用第三方广告 SDK。</li><li>不展示个性化广告。</li><li>不会跨越其他公司的 App 或网站跟踪你。</li><li>不会将摄像头内容用于广告、用户画像、人脸识别数据库或 AI 模型训练。</li></ul><p>Apple 可能依据其自身条款和隐私政策，独立处理 App Store、购买、设备、诊断或使用情况信息。</p></section>
 <section id="zp7"><h2>七、本地保存的数据</h2><p>为了运行 App 并保留偏好设置，App 可能在你的设备上保存有限信息，包括：</p><ul><li>已选择的布局、摄像头、变焦和录像偏好</li><li>与权限有关的状态及界面偏好</li><li>免费使用次数或限制状态</li><li>Pro 权益状态或购买恢复状态</li></ul><p>删除 App 可能移除这些本地设置。已经保存到“照片”中的媒体由 iOS 单独管理，不会因为删除 App 而自动删除。</p></section>
 <section id="zp8"><h2>八、数据分享与保留</h2><p>X Tools 不出售个人信息，也不会将你的照片、视频、录音或实时摄像头内容分享给广告商、数据经纪商或营销机构。</p><p>由于 X Tools 不会把摄像头媒体上传至服务器，因此不会在服务器上保留这些内容。保存到“照片”的文件会保留至你自行管理或删除。Apple 可能依据自身要求保留 App Store 交易记录。</p><p>仅在有效法律或法律程序要求时，相关信息才可能依法披露。在通常情况下，X Tools 无法访问仅存储在你设备上的媒体。</p></section>
