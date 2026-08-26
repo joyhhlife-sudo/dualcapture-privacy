@@ -184,6 +184,32 @@ li + li { margin-top: 7px; }
 html[data-xdc-lang="en"] .lang-panel[data-lang="zh"],
 html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !important; }
 .mobile-nav-toggle { display: none; }
+
+.hero-cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 14px 36px rgba(49,87,255,.32);
+  text-decoration: none;
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+.store-button:hover {
+  text-decoration: none;
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 44px rgba(49,87,255,.36);
+}
+.store-button svg { flex-shrink: 0; }
+.store-button .stack { display: inline-flex; flex-direction: column; line-height: 1.1; text-align: left; }
+.store-button .small { font-size: 11px; font-weight: 500; opacity: 0.92; margin-bottom: 2px; letter-spacing: .02em; }
+.store-button .big { font-size: 17px; letter-spacing: -0.01em; }
+
 @media (max-width: 820px) {
   .nav { min-height: 64px; align-items: flex-start; padding: 10px 0; }
   .brand-subtitle { max-width: 180px; }
@@ -246,6 +272,21 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
       <h1>明确规则，安心记录两个视角。</h1>
       <p>本条款涵盖设备兼容性、合理拍摄、免费与 Pro 功能、购买、更新及责任限制。</p>
     </div>
+
+    <div class="hero-cta">
+      <div class="lang-panel" data-lang="en">
+        <a class="store-button" href="https://apps.apple.com/app/id6777402248" target="_blank" rel="noopener" aria-label="Download X Dual Capture on the App Store">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="stack"><span class="small">Download on the</span><span class="big">App Store</span></span>
+        </a>
+      </div>
+      <div class="lang-panel" data-lang="zh">
+        <a class="store-button" href="https://apps.apple.com/cn/app/x%E5%90%8C%E6%AD%A5%E5%8F%8C%E6%8B%8D/id6777402248" target="_blank" rel="noopener" aria-label="下载 X 同步双拍">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-3.46-.48-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.87 2.38.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="stack"><span class="small">购买或免费下载</span><span class="big">App Store 中国大陆</span></span>
+        </a>
+      </div>
+    </div>
     <div class="hero-meta">
       <span class="pill">Two views, one moment.</span>
       <span class="pill">Made by X Tools</span>
@@ -268,11 +309,11 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
     <article class="content">
       <div class="lang-panel" data-lang="en">
 <div class="notice"><strong>Effective June 16, 2026.</strong> By downloading, purchasing, accessing, or using X Dual Capture, you agree to these Terms of Use.</div>
-<section id="t1"><h2>1. Acceptance and About the App</h2><p>These Terms govern your use of X Dual Capture, provided by X Tools. If you do not agree, do not use the app. Your use of the App Store and Apple services is also subject to Apple’s applicable terms.</p><p>X Dual Capture is a camera utility for supported devices. Features may include dual-camera photos and videos, Picture-in-Picture, split or Slant Split layouts, camera switching, supported ultra-wide capture, zoom, extended recording, and combined or separate exports.</p><p>Actual availability may vary by app version, hardware, iOS, camera configuration, system resources, region, and purchase status.</p></section>
+<section id="t1"><h2>1. Acceptance and About the App</h2><p>These Terms govern your use of X Dual Capture, provided by X Tools. If you do not agree, do not use the app. Your use of the App Store and Apple services is also subject to Apple’s applicable terms.</p><p>X Dual Capture is a camera utility for supported iPhone devices. It can capture photos and videos using the front and rear cameras together, offer different layouts, and save the result to your Photos library.</p><p>Actual availability may vary by app version, hardware, iOS, camera configuration, system resources, region, and purchase status.</p></section>
 <section id="t2"><h2>2. Device Compatibility and Permissions</h2><p>Not every device supports simultaneous front and rear capture, and supported devices may differ in cameras, zoom, resolution, frame rate, ultra-wide capability, and recording duration. You are responsible for confirming compatibility. X Tools does not guarantee that every feature will work on every device.</p><p>Some features require Camera, Microphone, or Photos permission. You may deny or revoke access in iOS Settings, but the related feature may then be unavailable.</p></section>
 <section id="t3"><h2>3. Your Content and Responsibilities</h2><p>You retain ownership of the photos, videos, audio, and other content you create. X Tools does not claim ownership of your content.</p><p>You are responsible for:</p><ul><li>What you record, save, share, or publish</li><li>Obtaining any required permission or consent</li><li>Respecting privacy, publicity, copyright, trademark, and other rights</li><li>Checking important recordings and keeping appropriate backups</li></ul></section>
 <section id="t4"><h2>4. Responsible and Safe Use</h2><p>You agree not to use the app:</p><ul><li>In violation of law or in a place where recording is prohibited</li><li>To secretly record in violation of consent or privacy laws</li><li>To harass, threaten, exploit, harm, or unlawfully surveil another person</li><li>To create or distribute unlawful or infringing content</li><li>To interfere with the app, App Store, device, or related services</li><li>To bypass purchase controls or obtain Pro features without authorization</li><li>In a manner that creates an unreasonable safety risk</li></ul><p>Recording and consent rules differ by jurisdiction. You are responsible for the law that applies to you.</p><p>Do not use the app while driving, cycling, operating machinery, crossing roads, or performing another activity that requires attention. The app is not designed for emergency, medical, security, surveillance, evidentiary, or life-critical use.</p></section>
-<section id="t5"><h2>5. Free Features and Pro Purchase</h2><p>The app may provide free features subject to limits on capture count, recording duration, layouts, cameras, zoom, exports, or combined and separate saves. Current limits are shown in the app and may be adjusted in later versions where permitted by law.</p><p>X Dual Capture may offer a non-consumable, one-time Pro purchase. It is not an auto-renewing subscription.</p><p>Pro may unlock:</p><ul><li>Slant Split and larger Picture-in-Picture</li><li>Combined and separate saves</li><li>Supported 0.5× ultra-wide capture</li><li>Zoom up to 6×</li><li>Extended recording</li><li>Additional Pro features made available in later versions</li></ul><p>Hardware-dependent features remain subject to device and iOS support. References to future features do not guarantee that a particular feature will be developed, released, or maintained indefinitely.</p></section>
+<section id="t5"><h2>5. Free Features and Pro Purchase</h2><p>X Dual Capture offers a free tier with limited features and a non-consumable, one-time Pro purchase that unlocks the full feature set. Pro is not an auto-renewing subscription.</p><p>Specific features, limits, and pricing are subject to change in later versions where permitted by law. Current availability and pricing are shown in the App Store listing and inside the app.</p><p>Hardware-dependent features remain subject to device and iOS support. References to future features do not guarantee that a particular feature will be developed, released, or maintained indefinitely.</p></section>
 <section id="t6"><h2>6. Pricing, Payment, Restore, and Refunds</h2><p>Prices are displayed by the App Store and may vary by country, region, currency, tax, and Apple pricing configuration. Apple processes payments. X Tools does not directly receive your full payment card or banking information.</p><p>Eligible completed purchases may be restored with the Apple Account used for the original purchase. Internet access and App Store availability may be required.</p><p>Refund requests are handled by Apple. X Tools cannot directly approve or issue App Store refunds. Apple determines eligibility under its policies and applicable law. You may use <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">Apple’s Report a Problem service</a>.</p></section>
 <section id="t7"><h2>7. Updates, Changes, and Availability</h2><p>X Tools may update the app to add, modify, replace, or remove features; improve compatibility or performance; address defects or security issues; change the organization of free and Pro features; update device or iOS requirements; or revise the interface.</p><p>X Tools does not guarantee permanent compatibility with every past device or operating-system version. Changes affecting purchased rights will be handled subject to applicable consumer law.</p><p>The app or individual features may be unavailable because of maintenance, App Store outages, operating-system changes, device limitations, camera conflicts, security issues, legal requirements, or events outside X Tools’ reasonable control. Uninterrupted or error-free operation is not guaranteed.</p></section>
 <section id="t8"><h2>8. Recording and File Risks</h2><p>Photos or videos can be interrupted, corrupted, or fail to save because of low storage, overheating, battery conditions, incoming calls, system memory pressure, app termination, camera or microphone interruption, iOS restrictions, or hardware limitations.</p><p>You should verify important recordings and maintain backups. X Dual Capture is not a substitute for professional, security, evidentiary, archival, or mission-critical recording equipment.</p></section>
@@ -283,11 +324,11 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
 </div>
       <div class="lang-panel" data-lang="zh">
 <div class="notice"><strong>生效日期：2026年6月16日。</strong>下载、购买、访问或使用 X 同步双拍，即表示你同意本使用条款。</div>
-<section id="zt1"><h2>一、接受条款与 App 简介</h2><p>本条款适用于你对 X Tools 提供的 X 同步双拍的使用。如不同意，请勿使用本 App。你对 App Store 和 Apple 服务的使用还应遵守 Apple 的适用条款。</p><p>X 同步双拍是一款适用于受支持设备的相机工具，功能可能包括双摄照片和视频、画中画、分屏或斜分屏、摄像头切换、设备支持的超广角、变焦、长时间录像，以及混合或分开导出。</p><p>实际功能可能因 App 版本、硬件、iOS、摄像头配置、系统资源、所在地区及购买状态而有所不同。</p></section>
+<section id="zt1"><h2>一、接受条款与 App 简介</h2><p>本条款适用于你对 X Tools 提供的 X 同步双拍的使用。如不同意，请勿使用本 App。你对 App Store 和 Apple 服务的使用还应遵守 Apple 的适用条款。</p><p>X 同步双拍是一款适用于受支持 iPhone 的相机工具。它可以同时使用前后摄像头拍照和录像，提供多种布局方式，并将结果保存到你的照片图库。</p><p>实际功能可能因 App 版本、硬件、iOS、摄像头配置、系统资源、所在地区及购买状态而有所不同。</p></section>
 <section id="zt2"><h2>二、设备兼容性与权限</h2><p>并非所有设备都支持前后摄同时拍摄。不同设备支持的摄像头、变焦、分辨率、帧率、超广角能力和录像时长也可能不同。你需要自行确认兼容性。X Tools 不保证所有功能都能在每台设备上使用。</p><p>部分功能需要相机、麦克风或照片权限。你可以在 iOS“设置”中拒绝或撤销权限，但对应功能可能因此不可用。</p></section>
 <section id="zt3"><h2>三、你的内容与责任</h2><p>你保留使用本 App 创建的照片、视频、音频及其他内容的所有权。X Tools 不主张拥有你的内容。</p><p>你需要自行负责：</p><ul><li>所拍摄、保存、分享或发布的内容</li><li>取得必要的许可或同意</li><li>遵守隐私权、肖像权、著作权、商标权及其他权利</li><li>检查重要拍摄结果并进行适当备份</li></ul></section>
 <section id="zt4"><h2>四、合理与安全使用</h2><p>你同意不以以下方式使用本 App：</p><ul><li>违反法律或在禁止录制的场所使用</li><li>违反知情同意或隐私法律进行秘密录制</li><li>骚扰、威胁、利用、伤害或非法监控他人</li><li>制作或传播违法或侵权内容</li><li>干扰 App、App Store、设备或相关服务</li><li>绕过购买机制或未经授权获取 Pro 功能</li><li>造成不合理的安全风险</li></ul><p>不同地区的录音录像及同意规则不同，你有责任遵守适用于自己的法律。</p><p>驾驶、骑行、操作机械、横穿道路或进行其他需要集中注意力的活动时，请勿使用本 App 分散注意力。本 App 不适用于紧急、医疗、安防、监控、法律取证或其他关键用途。</p></section>
-<section id="zt5"><h2>五、免费功能与 Pro 购买</h2><p>免费功能可能在拍摄次数、录像时长、布局、可用摄像头、变焦、导出选项或混合与分开保存方面设置限制。当前限制以 App 内显示为准，并可能在法律允许的范围内于后续版本调整。</p><p>X 同步双拍可能提供非消耗型的一次性 Pro 买断，不是自动续期订阅。</p><p>Pro 可能解锁：</p><ul><li>斜分屏和较大画中画</li><li>混合与分开保存</li><li>设备支持的 0.5× 超广角</li><li>最高 6× 变焦</li><li>长时间录像</li><li>后续版本中实际提供的其他 Pro 功能</li></ul><p>依赖硬件的功能仍受设备和 iOS 支持情况限制。“未来功能”等表述不保证某项具体功能一定开发、发布或永久维护。</p></section>
+<section id="zt5"><h2>五、免费功能与 Pro 购买</h2><p>X 同步双拍提供功能受限的免费版，以及一次买断即可解锁全部功能的 Pro（非消耗型、不是自动续期订阅）。</p><p>具体功能、限制和价格可能在法律允许的范围内于后续版本调整，以 App Store 列表和 App 内说明为准。</p><p>依赖硬件的功能仍受设备和 iOS 支持情况限制。“未来功能”等表述不保证某项具体功能一定开发、发布或永久维护。</p></section>
 <section id="zt6"><h2>六、价格、付款、恢复购买与退款</h2><p>价格由 App Store 显示，并可能因国家、地区、货币、税费和 Apple 定价配置而不同。付款由 Apple 处理，X Tools 不会直接获得你的完整银行卡或银行信息。</p><p>符合条件且已完成的购买，可以使用原购买 Apple 账户恢复。恢复购买可能需要网络连接，并受 App Store 可用性限制。</p><p>退款申请由 Apple 处理。X Tools 无法直接批准或发放 App Store 退款。退款资格由 Apple 政策和适用法律决定，可通过 <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">Apple“报告问题”服务</a>提交申请。</p></section>
 <section id="zt7"><h2>七、更新、调整与可用性</h2><p>X Tools 可能更新 App，以增加、修改、替换或移除功能；改善兼容性或性能；修复错误或安全问题；调整免费与 Pro 功能结构；更新设备或 iOS 要求；或修改界面。</p><p>X Tools 不保证 App 永久兼容所有旧设备或旧版操作系统。涉及已购买权益的变化，将依适用消费者保护法律处理。</p><p>本 App 或部分功能可能因维护、App Store 故障、操作系统变化、设备限制、摄像头冲突、安全问题、法律要求或超出 X Tools 合理控制范围的事件而暂时不可用。我们不保证服务始终不中断或完全无错误。</p></section>
 <section id="zt8"><h2>八、拍摄与文件风险</h2><p>照片或视频可能因存储不足、设备过热、电池状态、来电、系统内存压力、App 被终止、相机或麦克风中断、iOS 限制或硬件限制而中断、损坏或保存失败。</p><p>你应检查重要拍摄结果并保留备份。X 同步双拍不能替代专业拍摄、安防、取证、档案或关键任务设备。</p></section>
