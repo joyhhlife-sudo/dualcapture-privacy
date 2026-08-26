@@ -184,6 +184,32 @@ li + li { margin-top: 7px; }
 html[data-xdc-lang="en"] .lang-panel[data-lang="zh"],
 html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !important; }
 .mobile-nav-toggle { display: none; }
+
+.hero-cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 14px 36px rgba(49,87,255,.32);
+  text-decoration: none;
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+.store-button:hover {
+  text-decoration: none;
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 44px rgba(49,87,255,.36);
+}
+.store-button svg { flex-shrink: 0; }
+.store-button .stack { display: inline-flex; flex-direction: column; line-height: 1.1; text-align: left; }
+.store-button .small { font-size: 11px; font-weight: 500; opacity: 0.92; margin-bottom: 2px; letter-spacing: .02em; }
+.store-button .big { font-size: 17px; letter-spacing: -0.01em; }
+
 @media (max-width: 820px) {
   .nav { min-height: 64px; align-items: flex-start; padding: 10px 0; }
   .brand-subtitle { max-width: 180px; }
@@ -246,6 +272,21 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
       <h1>快速排查，继续拍摄。</h1>
       <p>这里提供权限、双摄兼容性、录像、保存、Pro 购买与恢复购买的排查说明。</p>
     </div>
+
+    <div class="hero-cta">
+      <div class="lang-panel" data-lang="en">
+        <a class="store-button" href="https://apps.apple.com/app/id6777402248" target="_blank" rel="noopener" aria-label="Download X Dual Capture on the App Store">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="stack"><span class="small">Download on the</span><span class="big">App Store</span></span>
+        </a>
+      </div>
+      <div class="lang-panel" data-lang="zh">
+        <a class="store-button" href="https://apps.apple.com/cn/app/x%E5%90%8C%E6%AD%A5%E5%8F%8C%E6%8B%8D/id6777402248" target="_blank" rel="noopener" aria-label="下载 X 同步双拍">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="stack"><span class="small">购买或免费下载</span><span class="big">App Store 中国大陆</span></span>
+        </a>
+      </div>
+    </div>
     <div class="hero-meta">
       <span class="pill">Two views, one moment.</span>
       <span class="pill">Made by X Tools</span>
@@ -269,12 +310,12 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
       <div class="lang-panel" data-lang="en">
 <div class="notice"><strong>Need help?</strong> Most camera problems are caused by permissions, unsupported camera combinations, low storage, or device temperature.</div>
 <section id="s1"><h2>1. Quick Start</h2><ol><li>Open X Dual Capture.</li><li>Allow Camera access.</li><li>Allow Microphone access if you want video with sound.</li><li>Select a supported Picture-in-Picture or split layout.</li><li>Adjust the camera, PiP position, or zoom when available.</li><li>Tap the photo or video control.</li><li>Allow Photos access when saving.</li></ol></section>
-<section id="s2"><h2>2. Device Compatibility</h2><p>Simultaneous front and rear capture depends on iPhone hardware, iOS, supported camera combinations, available memory, and thermal conditions. Not every iPhone supports every combination.</p><p>Features that may vary by device include:</p><ul><li>Simultaneous dual-camera capture</li><li>0.5× ultra-wide availability</li><li>Maximum zoom and optical camera selection</li><li>Resolution, frame rate, and recording duration</li><li>PiP size, split layouts, and camera switching</li><li>Ability to save combined and separate outputs</li></ul><p>If a control is unavailable, the app may disable it or display an explanation.</p></section>
+<section id="s2"><h2>2. Device Compatibility</h2><p>Simultaneous front and rear capture depends on iPhone hardware, iOS, supported camera combinations, available memory, and thermal conditions. Not every iPhone supports every combination.</p><p>Features that may vary by device include:</p><ul><li>Simultaneous dual-camera capture</li><li>Available cameras, lenses, and zoom ranges</li><li>Resolution, frame rate, and recording duration</li><li>Layout, PiP behaviour, and camera switching</li><li>Save options (combined and separate outputs)</li></ul><p>If a control is unavailable, the app may disable it or display an explanation.</p></section>
 <section id="s3"><h2>3. Camera, Microphone, and Photos Permissions</h2><h3>No camera preview</h3><ol><li>Open iPhone Settings.</li><li>Select <span class="code-path">X Dual Capture</span>.</li><li>Enable <strong>Camera</strong>.</li><li>Return to the app.</li></ol><h3>Video has no sound</h3><ol><li>Enable <strong>Microphone</strong> in Settings.</li><li>Confirm audio recording is enabled in the app.</li><li>Record a new test video. Audio cannot be added retroactively to an earlier silent recording.</li></ol><h3>Cannot save media</h3><ol><li>Review <strong>Photos</strong> permission in Settings.</li><li>Allow the app to add media or grant the access requested by iOS.</li><li>Check that the device has enough free storage.</li></ol></section>
 <section id="s4"><h2>4. Dual Camera Is Unavailable</h2><p>Dual-camera capture may be unavailable when the device does not support the selected MultiCam configuration, another app is using camera resources, the device is too warm, memory or storage is low, or iOS temporarily limits camera resources.</p><p>Try these steps:</p><ul><li>Close other camera, video, conferencing, or scanning apps.</li><li>Restart X Dual Capture, then restart the iPhone if needed.</li><li>Allow the device to cool down.</li><li>Free storage space.</li><li>Select another supported camera or layout.</li><li>Install a compatible iOS update.</li></ul></section>
-<section id="s5"><h2>5. Recording Stops or Saving Fails</h2><p>Long dual-camera recordings require significant processing power, battery, memory, and storage. Recording can stop because of low storage, high temperature, an incoming call, system memory pressure, app interruption, camera resource loss, or a current free-tier limit.</p><p>Before an important or long recording:</p><ul><li>Charge the device and confirm sufficient storage.</li><li>Close unnecessary apps and avoid direct sunlight or hot environments.</li><li>Record a short test first.</li><li>Do not lock the device or close the app while export is in progress.</li><li>Verify the saved result and back up important media.</li></ul><p>Saving combined plus separate camera files requires additional time and storage.</p></section>
-<section id="s6"><h2>6. Picture-in-Picture, Slant Split, Zoom, and Ultra-Wide</h2><p>Available layouts may include standard Picture-in-Picture and Pro options such as a larger PiP or Slant Split. Depending on the version and device, you may be able to move or resize PiP, exchange front and rear positions, and save combined or separate files.</p><p>Available camera factors depend on the physical cameras in your iPhone. Pro may unlock supported 0.5× ultra-wide capture and zoom up to 6×. Some levels may use digital zoom, so image quality can vary.</p></section>
-<section id="s7"><h2>7. Pro One-Time Purchase</h2><p>X Dual Capture may offer a non-consumable, one-time Pro purchase. It is not an auto-renewing subscription.</p><p>Pro may include:</p><ul><li>Slant Split and larger Picture-in-Picture</li><li>Combined and separate saves</li><li>Supported 0.5× ultra-wide capture</li><li>Zoom up to 6×</li><li>Extended recording</li><li>Additional Pro features made available in future versions</li></ul><p>Hardware-dependent features remain subject to device and iOS support.</p></section>
+<section id="s5"><h2>5. Recording Stops or Saving Fails</h2><p>Long dual-camera recordings require significant processing power, battery, memory, and storage. Recording can stop because of low storage, high temperature, an incoming call, system memory pressure, app interruption, or camera resource loss.</p><p>Before an important or long recording:</p><ul><li>Charge the device and confirm sufficient storage.</li><li>Close unnecessary apps and avoid direct sunlight or hot environments.</li><li>Record a short test first.</li><li>Do not lock the device or close the app while export is in progress.</li><li>Verify the saved result and back up important media.</li></ul><p>Saving combined plus separate camera files requires additional time and storage.</p></section>
+<section id="s6"><h2>6. Picture-in-Picture, Slant Split, Zoom, and Ultra-Wide</h2><p>Available layouts may include standard Picture-in-Picture and additional Pro layouts. Depending on the version and device, you may be able to move or resize PiP, exchange front and rear positions, and choose between combined or separate saves.</p><p>Available camera factors depend on the physical cameras in your iPhone. Pro unlocks the full set of supported layouts, cameras, zoom levels, and capture options. Quality of higher zoom levels depends on device hardware and may include digital zoom.</p></section>
+<section id="s7"><h2>7. Pro One-Time Purchase</h2><p>X Dual Capture offers a free tier with limited features and a non-consumable, one-time Pro purchase that unlocks the full feature set. It is not an auto-renewing subscription.</p><p>The exact features included with Pro may change as the app evolves. Specific availability is shown in the App Store listing and inside the app.</p><p>Hardware-dependent features remain subject to device and iOS support.</p></section>
 <section id="s8"><h2>8. Restore Purchases and Refunds</h2><h3>Restore an eligible purchase</h3><ol><li>Use the Apple Account that completed the original purchase.</li><li>Connect the device to the internet.</li><li>Open Settings or the Pro page in X Dual Capture.</li><li>Tap <strong>Restore Purchases</strong>.</li><li>Restart the app if the entitlement does not appear immediately.</li></ol><p>An eligible completed purchase is not charged again when restored.</p><h3>Purchase not recognized</h3><ul><li>Wait briefly for the App Store transaction to finish.</li><li>Check Apple purchase history.</li><li>Restart the app or device and try Restore Purchases again.</li><li>Confirm that the correct Apple Account is signed in.</li><li>Do not repeatedly buy the same item while a transaction is pending.</li></ul><h3>Refunds</h3><p>Apple processes App Store payments and refund requests. X Tools cannot directly issue an App Store refund. Submit an eligible request through <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">Apple’s Report a Problem service</a>. Apple determines eligibility.</p></section>
 <section id="s9"><h2>9. Before Reporting a Problem</h2><p>Please include:</p><ul><li>App version, iOS version, and iPhone model</li><li>The selected layout and camera combination</li><li>Whether the issue affects photos, videos, or both</li><li>Exact reproduction steps and any displayed error message</li><li>Whether restarting the app or device changed the result</li></ul><p>Do not post private media, Apple Account passwords, full receipts, payment card details, device passcodes, or other sensitive information.</p></section>
 <section id="s10"><h2>10. Contact Support</h2><div class="action-grid"><div class="action-card"><h3>Public technical issue</h3><p>Use GitHub Issues for reproducible, non-sensitive technical reports.</p><a class="button-link" href="https://github.com/joyhhlife-sudo/dualcapture-privacy/issues" target="_blank" rel="noopener">Open GitHub Issues</a></div><div class="action-card"><h3>Policies</h3><p>Review privacy and usage terms.</p><a class="button-link" href="index.html">Privacy Policy</a> &nbsp; <a href="terms.html">Terms</a></div></div><p>For private or purchase-related matters, use the support contact displayed on the X Dual Capture App Store product page when available. Feedback email：joyhhlife@gmail.com  </p></section>
@@ -282,12 +323,12 @@ html[data-xdc-lang="zh-Hans"] .lang-panel[data-lang="en"] { display: none !impor
       <div class="lang-panel" data-lang="zh">
 <div class="notice"><strong>需要帮助？</strong>大多数相机问题与权限、设备不支持的摄像头组合、存储不足或设备温度过高有关。</div>
 <section id="zs1"><h2>一、快速开始</h2><ol><li>打开 X 同步双拍。</li><li>允许相机权限。</li><li>如需录制声音，请允许麦克风权限。</li><li>选择设备支持的画中画或分屏布局。</li><li>根据需要调整摄像头、画中画位置或变焦。</li><li>点击拍照或录像按钮。</li><li>保存时允许照片权限。</li></ol></section>
-<section id="zs2"><h2>二、设备兼容性</h2><p>前后摄同时拍摄取决于 iPhone 硬件、iOS 版本、支持的摄像头组合、可用内存及设备温度。并非所有 iPhone 都支持全部组合。</p><p>可能因设备而异的功能包括：</p><ul><li>前后双摄同时拍摄</li><li>0.5× 超广角是否可用</li><li>最大变焦及光学摄像头选择</li><li>分辨率、帧率和录像时长</li><li>画中画尺寸、分屏布局和摄像头切换</li><li>混合与分开保存能力</li></ul><p>如果某项控制不可用，App 可能将其停用或显示说明。</p></section>
+<section id="zs2"><h2>二、设备兼容性</h2><p>前后摄同时拍摄取决于 iPhone 硬件、iOS 版本、支持的摄像头组合、可用内存及设备温度。并非所有 iPhone 都支持全部组合。</p><p>可能因设备而异的功能包括：</p><ul><li>前后双摄同时拍摄</li><li>可用摄像头、镜头与变焦范围</li><li>分辨率、帧率和录像时长</li><li>布局、画中画行为和摄像头切换</li><li>保存选项（混合与分开保存）</li></ul><p>如果某项控制不可用，App 可能将其停用或显示说明。</p></section>
 <section id="zs3"><h2>三、相机、麦克风和照片权限</h2><h3>没有相机预览</h3><ol><li>打开 iPhone“设置”。</li><li>选择 <span class="code-path">X 同步双拍</span>。</li><li>开启<strong>相机</strong>。</li><li>返回 App。</li></ol><h3>视频没有声音</h3><ol><li>在“设置”中开启<strong>麦克风</strong>。</li><li>确认 App 内已启用声音录制。</li><li>重新录制测试视频。之前无声录制的视频无法事后补入声音。</li></ol><h3>无法保存媒体</h3><ol><li>在“设置”中检查<strong>照片</strong>权限。</li><li>允许 App 添加媒体，或授予 iOS 要求的权限。</li><li>确认设备有足够可用存储空间。</li></ol></section>
 <section id="zs4"><h2>四、双摄功能不可用</h2><p>当设备不支持所选 MultiCam 组合、其他 App 正占用摄像头资源、设备温度过高、内存或存储不足，或 iOS 暂时限制相机资源时，双摄功能可能不可用。</p><p>可以尝试：</p><ul><li>关闭其他相机、视频会议、扫描或录像 App。</li><li>重新启动 X 同步双拍；必要时重启 iPhone。</li><li>等待设备降温。</li><li>清理存储空间。</li><li>选择其他支持的摄像头或布局。</li><li>安装兼容的 iOS 更新。</li></ul></section>
-<section id="zs5"><h2>五、录像停止或保存失败</h2><p>长时间双摄录像会占用较多性能、电量、内存和存储空间。录像可能因存储不足、温度过高、来电、系统内存压力、App 被中断、相机资源丢失或当前免费额度限制而停止。</p><p>重要或长时间录像前建议：</p><ul><li>为设备充足电并确认存储空间。</li><li>关闭不需要的 App，避免阳光直射或高温环境。</li><li>先录制短视频测试。</li><li>导出过程中不要锁屏或关闭 App。</li><li>检查保存结果并及时备份重要媒体。</li></ul><p>同时保存混合文件和前后摄分开文件，需要更多处理时间与存储空间。</p></section>
-<section id="zs6"><h2>六、画中画、斜分屏、变焦与超广角</h2><p>可用布局可能包括标准画中画，以及 Pro 的较大画中画或斜分屏。根据版本和设备，你可能可以移动或调整画中画、交换前后摄位置，并选择混合或分开保存。</p><p>可用摄像头倍数取决于 iPhone 的实际硬件。Pro 可能解锁设备支持的 0.5× 超广角和最高 6× 变焦。部分倍率可能使用数字变焦，因此画质会有所变化。</p></section>
-<section id="zs7"><h2>七、Pro 一次性买断</h2><p>X 同步双拍可能提供非消耗型的一次性 Pro 买断，不是自动续期订阅。</p><p>Pro 可能包括：</p><ul><li>斜分屏和较大画中画</li><li>混合与分开保存</li><li>设备支持的 0.5× 超广角</li><li>最高 6× 变焦</li><li>长时间录像</li><li>后续版本中实际提供的其他 Pro 功能</li></ul><p>依赖硬件的功能仍受设备和 iOS 支持情况限制。</p></section>
+<section id="zs5"><h2>五、录像停止或保存失败</h2><p>长时间双摄录像会占用较多性能、电量、内存和存储空间。录像可能因存储不足、温度过高、来电、系统内存压力、App 被中断或相机资源丢失而停止。</p><p>重要或长时间录像前建议：</p><ul><li>为设备充足电并确认存储空间。</li><li>关闭不需要的 App，避免阳光直射或高温环境。</li><li>先录制短视频测试。</li><li>导出过程中不要锁屏或关闭 App。</li><li>检查保存结果并及时备份重要媒体。</li></ul><p>同时保存混合文件和前后摄分开文件，需要更多处理时间与存储空间。</p></section>
+<section id="zs6"><h2>六、画中画、斜分屏、变焦与超广角</h2><p>可用布局可能包括标准画中画以及其他 Pro 布局。根据版本和设备，你可能可以移动或调整画中画、交换前后摄位置，并选择混合或分开保存。</p><p>可用摄像头倍数取决于 iPhone 的实际硬件。Pro 解锁全部支持的布局、摄像头、变焦倍数和拍摄选项。更高的变焦倍数依赖设备硬件，可能包含数字变焦。</p></section>
+<section id="zs7"><h2>七、Pro 一次性买断</h2><p>X 同步双拍提供功能受限的免费版，以及一次买断即可解锁全部功能的 Pro（非消耗型、不是自动续期订阅）。</p><p>Pro 包含的具体功能可能随 App 演进而调整，具体内容以 App Store 列表和 App 内说明为准。</p><p>依赖硬件的功能仍受设备和 iOS 支持情况限制。</p></section>
 <section id="zs8"><h2>八、恢复购买与退款</h2><h3>恢复符合条件的购买</h3><ol><li>登录原购买所使用的 Apple 账户。</li><li>确保设备已连接网络。</li><li>打开 X 同步双拍的“设置”或 Pro 页面。</li><li>点击<strong>恢复购买</strong>。</li><li>如权益未立即显示，可重新启动 App。</li></ol><p>恢复符合条件且已完成的购买不会再次收费。</p><h3>购买后未识别</h3><ul><li>等待 App Store 完成交易。</li><li>检查 Apple 购买记录。</li><li>重启 App 或设备，再次尝试恢复购买。</li><li>确认登录了正确的 Apple 账户。</li><li>交易处于等待状态时，不要反复购买同一项目。</li></ul><h3>退款</h3><p>App Store 付款和退款申请由 Apple 处理，X Tools 无法直接发放 App Store 退款。可通过 <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">Apple“报告问题”服务</a>提交符合条件的申请，最终资格由 Apple 判断。</p></section>
 <section id="zs9"><h2>九、提交问题前</h2><p>建议提供：</p><ul><li>App 版本、iOS 版本和 iPhone 型号</li><li>所选布局及摄像头组合</li><li>问题影响照片、视频，还是两者</li><li>准确的复现步骤及错误提示</li><li>重启 App 或设备后结果是否变化</li></ul><p>请勿公开提交私人媒体、Apple 账户密码、完整购买凭证、银行卡信息、设备密码或其他敏感信息。</p></section>
 <section id="zs10"><h2>十、联系支持</h2><div class="action-grid"><div class="action-card"><h3>公开技术问题</h3><p>可使用 GitHub Issues 提交可复现且不包含敏感信息的技术问题。</p><a class="button-link" href="https://github.com/joyhhlife-sudo/dualcapture-privacy/issues" target="_blank" rel="noopener">打开 GitHub Issues</a></div><div class="action-card"><h3>政策页面</h3><p>查看隐私政策和使用条款。</p><a class="button-link" href="index.html">隐私政策</a> &nbsp; <a href="terms.html">使用条款</a></div></div><p>涉及隐私或购买且不适合公开的信息，可在 App Store 产品页提供联系方式后，通过该支持渠道联系。Feedback email：joyhhlife@gmail.com </p></section>
